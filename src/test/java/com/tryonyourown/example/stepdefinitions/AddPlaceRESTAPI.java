@@ -6,11 +6,13 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 
+import java.io.FileNotFoundException;
+
 
 public class AddPlaceRESTAPI implements RESTAPIInterface {
     RequestSpecification reqSpec;
     Response response;
-    public AddPlaceRESTAPI setup() {
+    public AddPlaceRESTAPI setup() throws FileNotFoundException {
         Utils utils = new Utils();
         reqSpec = utils.buildRequestSpec();
         return this;

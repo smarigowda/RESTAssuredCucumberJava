@@ -5,12 +5,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.io.FileNotFoundException;
+
 public class StepDefinitions {
 
     AddPlaceRESTAPI addPlaceApi = new AddPlaceRESTAPI();
 
     @Given("Add Place Payload")
-    public void add_place_payload() {
+    public void add_place_payload() throws FileNotFoundException {
         // TO DO
         // setup should not be here
         // it should be moved to before all step
