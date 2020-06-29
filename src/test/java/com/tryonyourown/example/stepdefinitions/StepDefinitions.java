@@ -7,10 +7,13 @@ import io.cucumber.java.en.When;
 
 public class StepDefinitions {
 
-    AddPlaceAPI addPlaceApi = new AddPlaceAPI();
+    AddPlaceRESTAPI addPlaceApi = new AddPlaceRESTAPI();
 
     @Given("Add Place Payload")
     public void add_place_payload() {
+        // TO DO
+        // setup should not be here
+        // it should be moved to before all step
         addPlaceApi.setup().setPayload(AddPlace.getPayload());
     }
 
